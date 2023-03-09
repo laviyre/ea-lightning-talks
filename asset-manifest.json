@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ea-lightning-talks/static/css/main.8c60989e.css",
-    "main.js": "/ea-lightning-talks/static/js/main.10d5a81b.js",
+    "main.js": "/ea-lightning-talks/static/js/main.38c51ad2.js",
     "index.html": "/ea-lightning-talks/index.html",
     "main.8c60989e.css.map": "/ea-lightning-talks/static/css/main.8c60989e.css.map",
-    "main.10d5a81b.js.map": "/ea-lightning-talks/static/js/main.10d5a81b.js.map"
+    "main.38c51ad2.js.map": "/ea-lightning-talks/static/js/main.38c51ad2.js.map"
   },
   "entrypoints": [
     "static/css/main.8c60989e.css",
-    "static/js/main.10d5a81b.js"
+    "static/js/main.38c51ad2.js"
   ]
 }
