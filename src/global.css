@@ -1,0 +1,152 @@
+:root {
+    --background: rgb(35,35,35);
+    --background-focus: rgb(30,30,30);
+    --background-super-focus: rgb(25,25,25);
+
+    --text: rgb(179,179,179);
+    --text-header: rgb(239, 239, 239);
+    --text-aside: rgb(143, 143, 143);
+
+    --ea-aqua: rgb(60, 132, 152);
+    --blue: rgb(29, 29, 230);
+
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+#root {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    background-color: var(--background-focus);
+    color: var(--text-header);
+    padding-left: 20px;
+    height: 60px;
+    border-bottom: solid 2px var(--text-aside);
+    display: flex;
+    align-items: center;
+}
+
+header > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background-color: var(--ea-aqua);
+    border: none;
+    height: 50px;
+    width: 120px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-header);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all .1s;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+span {
+    display: flex;
+    gap: 10px;
+}
+
+label {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+div {
+    color: var(--text-header);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+input {
+    background-color: var(--background-super-focus);
+    color: var(--text-header);
+    height: 30px;
+    font-size: 1.2rem;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding-right: 4.5px;
+    border: solid 0.5px var(--text-aside);
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+input:focus {
+    border: solid 2px var(--blue);
+    padding-right: 3px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100vw;
+    border-bottom: 2px solid var(--text-aside);
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+main > button {
+    align-self: start;
+}
+
+section {
+    background-color: var(--background-super-focus);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    min-width: 70vw;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+section > div {
+    width: 120px;
+}
+
+section > span {
+    margin-right: auto;
+}

@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import AddPerson from "./components/AddPerson";
+import DisplayPairs from "./components/DisplayPairs";
+import {useState, useEffect} from 'react';
+import QuestionAllocator from "./algorithm/question-allocator";
+import { questions } from "./algorithm/data/questions";
 
 function App() {
+  const [questionAllocator, setQA] = useState();
+
+  useEffect(() => {
+      setQA(new QuestionAllocator([], questions))
+  }, [])
+
+  function add(name, advanced) {
+    questionAllocator.addPerson(name, advanced);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <header><h1>Effective Altruism: Lightning Talks</h1></header>
+      <AddPerson add = {add}/>
+      <DisplayPairs questionAllocator={questionAllocator}/>
+    </>
   );
 }
 
