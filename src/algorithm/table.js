@@ -29,8 +29,8 @@ const Table = (() => {
         }
     }
 
-    const validSetup = () => {
-        return tables.every(t => t <= 4);
+    const validSetup = (totPeople) => {
+        return tables.every(t => t <= (totPeople < 23 ? 4 : 8));
     }
 
     return {resetTables, validSetup, addToTable};

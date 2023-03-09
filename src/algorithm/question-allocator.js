@@ -81,7 +81,7 @@ class QuestionAllocator {
                     continue;
             }
 
-            if (!Table.validSetup())
+            if (!Table.validSetup(this.#people.length))
                 continue;
 
             currPairs.forEach(pair => {
